@@ -1,0 +1,50 @@
+<h1>Employee List<h1>
+	<%= link_to "Create", new_emp_path %>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Designation</th>
+		</thead>
+		<% @emps.each do |emp| %>
+		<tr>
+			<td><%= emp.name %></td>
+			<td><%= emp.age %></td>
+			<td><%= emp.gender %></td>
+			<td><%= emp.designation %></td>
+			<td>
+				
+				<%= link_to "Edit",edit_emp_path(emp) %>
+				<%= link_to "Delete",emp, method: :delete, data: {confirm: "Are you sure you want to delete this ?"} %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+
+	<style type="text/css">
+		body{
+
+			text-align: center;
+			background-color: #d0eaf3;
+			font-family: verdana;
+		}
+
+		table{
+				margin: auto;
+				margin-top: 20px;
+				font-size: 30px;	
+				border-style: solid;
+
+		}
+
+		th {
+			border-style: solid;
+			padding: 10px;
+		}
+
+		td{
+			font-size: 20px;
+			padding-top: 20px;
+		}
+	</style>

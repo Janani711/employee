@@ -1,0 +1,39 @@
+<%= form_for @emps do |f| %>
+<div>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</div>
+<div>
+	<%= f.label :age %>
+	<%= f.number_field :age %>
+</div>
+<div>
+	<%= f.label :gender %>
+	<%= f.text_field :gender %>
+</div>
+<div>
+	<%= f.label :designation %>
+	<%= f.text_field :designation %>
+</div>
+<div id="submit2">
+	<%= f.submit %>
+</div>
+<% end %>
+
+<style type="text/css">
+	div{
+
+		margin-left: 450px;
+		margin-top: 20px;
+		font-family: verdana;
+	}
+	body{
+     	background-color: #d0eaf3;
+     	text-align: ;
+
+	}
+	#submit2{
+		margin-left: 550px;
+
+	}
+</style>
